@@ -6,7 +6,7 @@ About Me
 I enjoy learning new technical skills and exploring how websites, cloud platforms, and online systems work together.
 I am currently practicing:
 •	Website development
-•	GitHub projects
+•	GitHub projects 
 •	Cloud engineering basics
 •	Deployment systems
 •	Technology tools
