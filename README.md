@@ -1,20 +1,22 @@
-# My-s-website
+Welcome to My Website
+Hello and welcome.
+My name is Angelina, and I am currently learning web development, cloud engineering, and modern technology systems.
+This website is part of my growing journey into technology, engineering, and creative digital projects.
+About Me
+I enjoy learning new technical skills and exploring how websites, cloud platforms, and online systems work together.
+I am currently practicing:
+•	Website development
+•	GitHub projects
+•	Cloud engineering basics
+•	Deployment systems
+•	Technology tools
+Current Projects
+•	Personal portfolio website
+•	GitHub hosted projects
+•	Beginner cloud engineering projects
+•	Web deployment practice
+Goals
+My goal is to continue building practical skills in technology and engineering through real projects and continuous learning.
+Thank you for visiting my website.
 
-<p>My name is Angelina.</p> <!DOCTYPE html>
-<html>
-<head>
-  <title>My Website</title>
-</head>
 
-<body>
-
-<h1>Hello World</h1>
-
-<p>My name is Angelina.</p>
-
-<p>I am learning AWS engineering.</p>
-
-<button>Welcome</button>
-
-</body>
-</html>
