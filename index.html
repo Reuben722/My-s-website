@@ -1,43 +1,411 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head> 
-  <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelina - Cloud Engineer & Web Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      color: #7c3aed;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+      padding: 4rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h1 .highlight {
+      color: #7c3aed;
+    }
+
+    .hero-content p {
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #7c3aed;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #6d28d9;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #333;
+      border: 2px solid #333;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 2rem;
+      background: white;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-icon {
+      width: 100px;
+      height: 100px;
+      background: #f3e8ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .about h2 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .about p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* Skills and Projects Section */
+    .skills-projects {
+      padding: 4rem 2rem;
+      background: #f9fafb;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .section h3 {
+      color: #1f2937;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .skill-item, .project-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-icon, .project-icon {
+      width: 50px;
+      height: 50px;
+      background: #7c3aed;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .skill-item p, .project-item p {
+      color: #666;
+    }
+
+    .skill-item strong, .project-item strong {
+      display: block;
+      color: #1f2937;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Connect Section */
+    .connect {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: white;
+    }
+
+    .connect h2 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .connect p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .connect-email {
+      color: #7c3aed;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: #f9fafb;
+      padding: 2rem;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello World</h1>
-  
-  <img src="images/hero-image.png" alt="Hero Image">
-  <img src="images/image.jpg" alt="Image">
-  <img src="images/chatgpt.jpg" alt="Profile Image">
-  <img src="images/bio.jpg" alt="Bio Image">
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">🏠 Angelina</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <p>Welcome to My Website</p>
-  
-  <h2>About Me</h2>
-  <p>My name is Angelina. I am learning cloud engineering, web development, and modern technology systems.</p>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to<br><span class="highlight">My Website</span></h1>
+      <p>Hello and welcome! My name is Angelina. I am passionate about technology and on a journey to become a skilled Cloud Engineer and Software Developer. This website showcases my learning journey, projects, and the skills I am building every day.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">📧 Get in Touch</button>
+        <button class="btn btn-secondary">📄 View My Resume</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-image.png" alt="Cloud Engineering">
+    </div>
+  </section>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>GitHub</li>
-    <li>HTML</li>
-    <li>Website Deployment</li>
-    <li>Cloud Engineering Fundamentals</li>
-  </ul>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-icon">👤</div>
+      <div>
+        <h2>About Me</h2>
+        <p>My name is Angelina. I enjoy learning new technologies and exploring how systems, websites, and cloud platforms work together. I am passionate about cloud engineering and software development, where I can contribute to meaningful projects and make a positive impact.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Personal Website</li>
-    <li>GitHub Portfolio</li>
-    <li>Future Cloud Engineering Projects</li>
-  </ul>
+  <!-- Skills and Projects Section -->
+  <section class="skills-projects" id="skills">
+    <div class="container">
+      <!-- Skills -->
+      <div class="section">
+        <h3>Skills I'm Learning</h3>
+        
+        <div class="skill-item">
+          <div class="skill-icon">☁️</div>
+          <div>
+            <strong>Cloud Engineering Fundamentals</strong>
+            <p>AWS, Azure, and cloud architecture basics</p>
+          </div>
+        </div>
 
-  <h2>Goals</h2>
-  <p>My goal is to continue building practical skills in technology and engineering through real projects and continuous learning.</p>
-  
-  <p>I am learning cloud engineering.</p>
+        <div class="skill-item">
+          <div class="skill-icon">💻</div>
+          <div>
+            <strong>HTML, CSS, JavaScript</strong>
+            <p>Web development and front-end technologies</p>
+          </div>
+        </div>
 
-  <button>Welcome</button>
+        <div class="skill-item">
+          <div class="skill-icon">🐙</div>
+          <div>
+            <strong>Git & GitHub</strong>
+            <p>Version control and collaborative development</p>
+          </div>
+        </div>
 
-  <p>Thank you for visiting my website.</p>
+        <div class="skill-item">
+          <div class="skill-icon">🐧</div>
+          <div>
+            <strong>Linux Basics</strong>
+            <p>Command line and system fundamentals</p>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">📦</div>
+          <div>
+            <strong>Deployment & Web Hosting</strong>
+            <p>GitHub Pages and cloud deployment</p>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">🔧</div>
+          <div>
+            <strong>Problem Solving & Troubleshooting</strong>
+            <p>Debugging and technical problem resolution</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="section" id="projects">
+        <h3>Projects</h3>
+
+        <div class="project-item">
+          <div class="project-icon">🌐</div>
+          <div>
+            <strong>Personal Portfolio Website</strong>
+            <p>Built and designed a responsive personal portfolio using HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-icon">🐙</div>
+          <div>
+            <strong>GitHub Projects</strong>
+            <p>Created and managed multiple repositories to practice coding and version control.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-icon">☁️</div>
+          <div>
+            <strong>Cloud Engineering Practice</strong>
+            <p>Learning cloud services, best practices for modern cloud environments.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-icon">🚀</div>
+          <div>
+            <strong>Web Deployment</strong>
+            <p>Practicing deployment using GitHub Pages and other static site platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <section class="connect" id="contact">
+    <h2>Let's Connect</h2>
+    <p>I am always open to connecting with people, collaborating on projects, and exploring opportunities in Cloud Engineering, Software Engineering, or related technology.</p>
+    <p>📧 <a href="mailto:themullings@proton.me" class="connect-email">themullings@proton.me</a></p>
+    <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">Feel free to reach out — I'd love to hear from you!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Angelina | Cloud Engineering • Web Development • Continuous Learning</p>
+    <p><a href="https://github.com/Reuben722/My-s-website" target="_blank" style="color: #7c3aed; text-decoration: none;">View this project on GitHub</a></p>
+  </footer>
 </body>
 </html>
